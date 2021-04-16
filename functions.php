@@ -23,7 +23,7 @@ function n_chile_script_enqueue(){
   wp_enqueue_script( 'gsap-animation-js', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js', array('jquery', 'gsap-js'), null, true );
 
 
-  wp_enqueue_script( 'n_chile-js', get_template_directory_uri() . '/js/bv_script.js', array('jquery', 'scroll-magic-js', 'gsap-js', 'bootstrap-js'), null, true );
+  wp_enqueue_script( 'n_chile-js', get_template_directory_uri() . '/js/n_chile.js', array('jquery', 'scroll-magic-js', 'gsap-js', 'bootstrap-js'), null, true );
 
 }
 add_action( 'wp_enqueue_scripts', 'n_chile_script_enqueue' );
@@ -70,7 +70,7 @@ add_action( 'woocommerce_checkout_after_order_review', 'woocommerce_checkout_pay
 // Add product thumbnail to checkout order review
 add_filter( 'woocommerce_cart_item_name', 'bv_image_on_checkout', 10, 3 );
 
-function bv_image_on_checkout( $name, $cart_item, $cart_item_key ) {  
+function n_chile_image_on_checkout( $name, $cart_item, $cart_item_key ) {  
 
     /* Return if not checkout page */
     if ( ! is_checkout() ) {
