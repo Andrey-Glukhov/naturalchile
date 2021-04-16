@@ -26,7 +26,7 @@ function n_chile_script_enqueue(){
   wp_enqueue_script( 'n_chile-js', get_template_directory_uri() . '/js/bv_script.js', array('jquery', 'scroll-magic-js', 'gsap-js', 'bootstrap-js'), null, true );
 
 }
-add_action( 'wp_enqueue_scripts', 'bv_script_enqueue' );
+add_action( 'wp_enqueue_scripts', 'n_chile_script_enqueue' );
 
 function bv_theme_setup(){
   add_theme_support('menus');

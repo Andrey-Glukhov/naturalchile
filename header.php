@@ -23,5 +23,5 @@ endif;
 
 <body <?php body_class($naturalchile_classes); ?>>
   <header>
-  <?php include (TEMPLATEPATH . '/navigation.php'); ?>
+  <?php //include (TEMPLATEPATH . '/navigation.php'); ?>
 	</header>

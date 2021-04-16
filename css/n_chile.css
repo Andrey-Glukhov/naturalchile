@@ -164,6 +164,156 @@ button.navbar-toggler {
 
 /* ----------- home ----------------*/
 
+.home-container {
+    min-height: 100vh;
+}
+
+.container-row {
+    height: 100%;
+}
+
+.side-column-left,
+.side-column-right {
+    /* background-image: url(../img/6-7-06.png); */
+    /* background-size: cover; */
+    /* background-size: 100%;
+    background-repeat: repeat-y; */
+    display: grid;
+}
+
+.side-column-left div,
+.side-column-right div {
+    border-top: #000000 2px solid;
+    border-left: #000000 2px solid;
+    border-right: #000000 2px solid;
+}
+
+.side-column-left div.last,
+.side-column-right div.last {
+    border-bottom: #000000 2px solid;
+}
+
+.content-column {}
+
+.grid-cell-left-1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.grid-cell-left-2 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.grid-cell-left-3 {
+    grid-column: 1 / 2;
+    grid-row: 3 / 5;
+}
+
+.grid-cell-left-4 {
+    grid-column: 1 / 2;
+    grid-row: 5 / 6;
+}
+
+.grid-cell-left-5 {
+    grid-column: 1 / 2;
+    grid-row: 6 / 7;
+}
+
+.grid-cell-left-6 {
+    grid-column: 1 / 2;
+    grid-row: 7 / 10;
+}
+
+.grid-cell-left-7 {
+    grid-column: 1 / 2;
+    grid-row: 10 / 11;
+}
+
+.grid-cell-left-8 {
+    grid-column: 1 / 2;
+    grid-row: 11 / 12;
+}
+
+.grid-cell-left-9 {
+    grid-column: 1 / 2;
+    grid-row: 12 / 14;
+}
+
+.grid-cell-left-10 {
+    grid-column: 1 / 2;
+    grid-row: 14 / 17;
+}
+
+.grid-cell-right-1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.grid-cell-right-2 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 7;
+}
+
+.grid-cell-right-3 {
+    grid-column: 1 / 2;
+    grid-row: 7 / 8;
+}
+
+.grid-cell-right-4 {
+    grid-column: 1 / 2;
+    grid-row: 8 / 11;
+}
+
+.grid-cell-right-5 {
+    grid-column: 1 / 2;
+    grid-row: 11 / 12;
+}
+
+.grid-cell-right-6 {
+    grid-column: 1 / 2;
+    grid-row: 12 / 13;
+}
+
+.grid-cell-right-7 {
+    grid-column: 1 / 2;
+    grid-row: 13 / 14;
+}
+
+.grid-cell-right-8 {
+    grid-column: 1 / 2;
+    grid-row: 14 / 17;
+}
+
+.bg_color_black {
+    background-color: #241F20;
+}
+
+.bg_color_rose {
+    background-color: #FFA4CD;
+}
+
+.bg_color_green {
+    background-color: #00ADA0;
+}
+
+.bg_color_blue {
+    background-color: #374EA1;
+}
+
+.bg_color_red {
+    background-color: #B62126;
+}
+
+.bg_color_white {
+    background-color: #fff;
+}
+
+
+/* .side-column-right {
+    background-image: url(../img/6-7-06.png);
+} */
+
 
 /* ----------- cart icon ----------------*/
 
