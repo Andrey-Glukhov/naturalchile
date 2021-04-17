@@ -86,7 +86,6 @@ nav.navbar {
 
 .home-container {
     min-height: 100vh;
-    padding: 0;
 }
 
 .container-row {
@@ -96,6 +95,14 @@ nav.navbar {
 .side-column-left,
 .side-column-right {
     display: grid;
+}
+
+.side-column-left {
+    padding-left: 0;
+}
+
+.side-column-right {
+    padding-right: 0;
 }
 
 .side-column-left div,
@@ -229,6 +236,20 @@ nav.navbar {
     height: auto;
 }
 
+.content-column>.wp-block-columns>.wp-block-column>h2 {
+    font-family: '13552', serif;
+    font-size: 2.3rem;
+}
+
+.content-column>.wp-block-columns>.wp-block-column>p {
+    font-family: '13552', serif;
+    font-size: 1.1rem;
+}
+
+.content-column {
+    padding: 0 50px;
+}
+
 
 /* ----------- cart icon ----------------*/
 
@@ -297,6 +318,9 @@ nav.navbar {
     .send_button {
         align-items: center;
     }
+    .content-column {
+        padding: 0 15px;
+    }
 }
 
 
@@ -309,6 +333,9 @@ nav.navbar {
     }
     .send_button {
         align-items: center;
+    }
+    .content-column {
+        padding: 0 15px;
     }
 }
 
