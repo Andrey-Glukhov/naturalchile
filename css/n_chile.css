@@ -84,6 +84,9 @@ nav.navbar {
 
 /* ----------- home ----------------*/
 
+
+/* ----------- about----------------*/
+
 .home-container {
     min-height: 100vh;
 }
@@ -297,6 +300,37 @@ nav.navbar {
 
 
 /* ----------- wooccommerce ----------------*/
+
+
+/* ----------- account ----------------*/
+
+.woocommerce-MyAccount-navigation,
+.woocommerce-MyAccount-content {
+    font-family: '13552', serif;
+}
+
+.woocommerce-MyAccount-navigation {
+    font-size: 1.2rem;
+    color: #241F20;
+}
+
+.woocommerce-MyAccount-navigation li {
+    list-style: none;
+}
+
+.woocommerce-MyAccount-navigation li a {
+    color: #241F20;
+}
+
+.woocommerce-MyAccount-content {
+    font-size: 1rem;
+    color: #241F20;
+}
+
+.woocommerce-EditAccountForm .woocommerce-Button.button {
+    background-color: #fff;
+    border: #241F20 3px solid;
+}
 
 
 /* ----------- shipping ----------------*/
