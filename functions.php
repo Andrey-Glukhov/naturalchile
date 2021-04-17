@@ -107,4 +107,7 @@ function quantity_inputs_for_woocommerce_loop_add_to_cart_link( $html, $product 
 	return $html;
 }
 
+remove_action('woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price',10);
+add_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_price',6);
+
 ?>
