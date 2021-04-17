@@ -25,6 +25,18 @@ if ( ! defined( 'ABSPATH' ) ) {
             <h1>PRODUCT</h1>
         </div>
     </div>
-	<div class="row">
-        <div class="col-10">
-    		<ul class="products columns-<?php echo esc_attr( wc_get_loop_prop( 'columns' ) ); ?>">
+    <div class="row">
+        <div class="col-md-1 col-sm-2 col-2 side-column-left">
+            <div class="grid-cell-left-1 bg_color_red"></div>
+            <div class="grid-cell-left-2 bg_color_white"></div>
+            <div class="grid-cell-left-3 bg_color_black"></div>
+            <div class="grid-cell-left-4 bg_color_rose"></div>
+            <div class="grid-cell-left-5 bg_color_white"></div>
+            <div class="grid-cell-left-6 bg_color_green"></div>
+            <div class="grid-cell-left-7 bg_color_rose"></div>
+            <div class="grid-cell-left-8 bg_color_red"></div>
+            <div class="grid-cell-left-9 bg_color_white"></div>
+            <div class="grid-cell-left-10 bg_color_rose last"></div>
+        </div>
+        <div class="col-md-10 col-sm-8 col-8">
+            <ul class="row products columns-<?php echo esc_attr( wc_get_loop_prop( 'columns' ) ); ?>">
