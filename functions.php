@@ -43,13 +43,17 @@ add_theme_support('custom-background');
 add_theme_support('custom-header');
 add_theme_support('post-formats', array('aside', 'chat', 'gallery','link','image','quote','status','video'));
 add_theme_support('post-thumbnails');
+add_theme_support('widgets');
 
-
+// Remove woocommerce breadcrumb
 remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20);
+// Remove shop page result count
 remove_action('woocommerce_before_shop_loop', 'woocommerce_result_count', 20);
+// Remove shop page catalog ordering
 remove_action('woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30);
-remove_action('woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30);
-
+//Remove shop page ???
+//remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
+// Hide shop page title
 add_filter('woocommerce_show_page_title', 'hide_shop_page_title');
 
 function hide_shop_page_title(){
