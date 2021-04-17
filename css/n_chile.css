@@ -45,6 +45,31 @@ html {
     max-width: 110px;
 }
 
+#menu-menu-1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-item {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-family: '13552', serif;
+}
+
+.menu-item>a {
+    color: #B62126;
+}
+
+.col-menu-wrapper {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+nav.navbar {
+    padding-top: 30px;
+}
+
 
 /* ----------- menu ----------------*/
 
@@ -64,31 +89,33 @@ html {
 }
 
 .container-row {
-    height: 100%;
+    min-height: 100vh;
 }
 
 .side-column-left,
 .side-column-right {
-    /* background-image: url(../img/6-7-06.png); */
-    /* background-size: cover; */
-    /* background-size: 100%;
-    background-repeat: repeat-y; */
     display: grid;
+}
+
+.side-column-left {
+    padding-left: 0;
+}
+
+.side-column-right {
+    padding-right: 0;
 }
 
 .side-column-left div,
 .side-column-right div {
-    border-top: #000000 2px solid;
-    border-left: #000000 2px solid;
-    border-right: #000000 2px solid;
+    border-top: #000000 5px solid;
+    border-left: #000000 5px solid;
+    border-right: #000000 5px solid;
 }
 
 .side-column-left div.last,
 .side-column-right div.last {
     border-bottom: #000000 2px solid;
 }
-
-.content-column {}
 
 .grid-cell-left-1 {
     grid-column: 1 / 2;
@@ -204,6 +231,25 @@ html {
     background-color: #fff;
 }
 
+.wp-block-image.size-large>img {
+    width: 100%;
+    height: auto;
+}
+
+.content-column>.wp-block-columns>.wp-block-column>h2 {
+    font-family: '13552', serif;
+    font-size: 2.3rem;
+}
+
+.content-column>.wp-block-columns>.wp-block-column>p {
+    font-family: '13552', serif;
+    font-size: 1.1rem;
+}
+
+.content-column {
+    padding: 0 50px;
+}
+
 
 /* ----------- cart icon ----------------*/
 
@@ -272,6 +318,9 @@ html {
     .send_button {
         align-items: center;
     }
+    .content-column {
+        padding: 0 15px;
+    }
 }
 
 
@@ -285,12 +334,19 @@ html {
     .send_button {
         align-items: center;
     }
+    .content-column {
+        padding: 0 15px;
+    }
 }
 
 
 /*md*/
 
-@media screen and (min-width: 768px) and (max-width: 992px) {}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .menu-item {
+        font-size: 0.75rem;
+    }
+}
 
 
 /*lg*/
