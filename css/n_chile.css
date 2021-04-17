@@ -45,6 +45,31 @@ html {
     max-width: 110px;
 }
 
+#menu-menu-1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-item {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-family: '13552', serif;
+}
+
+.menu-item>a {
+    color: #B62126;
+}
+
+.col-menu-wrapper {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+nav.navbar {
+    padding-top: 30px;
+}
+
 
 /* ----------- menu ----------------*/
 
@@ -61,34 +86,29 @@ html {
 
 .home-container {
     min-height: 100vh;
+    padding: 0;
 }
 
 .container-row {
-    height: 100%;
+    min-height: 100vh;
 }
 
 .side-column-left,
 .side-column-right {
-    /* background-image: url(../img/6-7-06.png); */
-    /* background-size: cover; */
-    /* background-size: 100%;
-    background-repeat: repeat-y; */
     display: grid;
 }
 
 .side-column-left div,
 .side-column-right div {
-    border-top: #000000 2px solid;
-    border-left: #000000 2px solid;
-    border-right: #000000 2px solid;
+    border-top: #000000 5px solid;
+    border-left: #000000 5px solid;
+    border-right: #000000 5px solid;
 }
 
 .side-column-left div.last,
 .side-column-right div.last {
     border-bottom: #000000 2px solid;
 }
-
-.content-column {}
 
 .grid-cell-left-1 {
     grid-column: 1 / 2;
@@ -204,6 +224,11 @@ html {
     background-color: #fff;
 }
 
+.wp-block-image.size-large>img {
+    width: 100%;
+    height: auto;
+}
+
 
 /* ----------- cart icon ----------------*/
 
@@ -290,7 +315,11 @@ html {
 
 /*md*/
 
-@media screen and (min-width: 768px) and (max-width: 992px) {}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .menu-item {
+        font-size: 0.75rem;
+    }
+}
 
 
 /*lg*/
