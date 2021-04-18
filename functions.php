@@ -110,4 +110,67 @@ function quantity_inputs_for_woocommerce_loop_add_to_cart_link( $html, $product 
 remove_action('woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price',10);
 add_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_price',6);
 
+
+if ( ! function_exists( 'n_chile_cart_link' ) ) {
+	/**
+	 * Get  cart link including number of items and sum
+	 *
+	 */
+	function n_chile_cart_link() {
+		if ( ! n_chile_cart_available() ) {
+			return;
+		}
+		?>
+
+<li id="menu-item-999" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-7 current_page_item menu-item-999">
+  <a href="<?php echo esc_url( wc_get_cart_url() ); ?>" aria-current="page">
+    <svg class="svg-inline--fa fa-shopping-basket fa-w-18 dashicons after-menu-image-icons" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="shopping-basket" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M576 216v16c0 13.255-10.745 24-24 24h-8l-26.113 182.788C514.509 462.435 494.257 480 470.37 480H105.63c-23.887 0-44.139-17.565-47.518-41.212L32 256h-8c-13.255 0-24-10.745-24-24v-16c0-13.255 10.745-24 24-24h67.341l106.78-146.821c10.395-14.292 30.407-17.453 44.701-7.058 14.293 10.395 17.453 30.408 7.058 44.701L170.477 192h235.046L326.12 82.821c-10.395-14.292-7.234-34.306 7.059-44.701 14.291-10.395 34.306-7.235 44.701 7.058L484.659 192H552c13.255 0 24 10.745 24 24zM312 392V280c0-13.255-10.745-24-24-24s-24 10.745-24 24v112c0 13.255 10.745 24 24 24s24-10.745 24-24zm112 0V280c0-13.255-10.745-24-24-24s-24 10.745-24 24v112c0 13.255 10.745 24 24 24s24-10.745 24-24zm-224 0V280c0-13.255-10.745-24-24-24s-24 10.745-24 24v112c0 13.255 10.745 24 24 24s24-10.745 24-24z"></path></svg><!-- <span class="dashicons fas fa-shopping-basket after-menu-image-icons"></span> Font Awesome fontawesome.com -->
+    <span class="menu-image-title-after menu-image-title">Cart</span>
+    <?php if (WC()->cart->get_cart_contents_count() > 0) { ?>
+                <span class="count"> <?php echo wp_kses_data( sprintf( '%d', WC()->cart->get_cart_contents_count())  ); ?></span>
+    <?php } ?>
+  </a>
+</li>
+<?php
+	}
+}
+if ( ! function_exists( 'n_chile_cart_available' ) ) {
+	/**
+	 * Check if  Woo Cart instance is available
+	 */
+	function n_chile_cart_available() {
+		$woo = WC();
+		return $woo instanceof \WooCommerce && $woo->cart instanceof \WC_Cart;
+	}
+}
+// add menu cart fragment
+add_filter('woocommerce_add_to_cart_fragments', 'n_chile_add_refreshed_fragments');
+
+function n_chile_add_refreshed_fragments($fragments) {
+  ob_start();
+
+  n_chile_cart_link();
+
+  $cart_part = ob_get_clean();
+  $new_fragments = [];
+  $new_fragments['a.cart-contents'] = $cart_part;
+  return $new_fragments;
+}
+
+add_filter( 'wp_nav_menu_items', 'child_theme_menu_items', 10, 2);
+
+function child_theme_menu_items($items, $args) {
+    // get array of '<li> ... </li>' strings
+    preg_match_all('/<\s*?li\b[^>]*>(.*?)<\/li\b[^>]*>/s', $items, $items_array );
+    error_log('--->1' . print_r($items,true));
+    error_log('--->3' . print_r($items_array,true));
+    ob_start();
+    n_chile_cart_link();
+    $cart_part = ob_get_clean();
+    $items_array[0][] = $cart_part;
+    $items = implode('', $items_array[0]);
+    error_log('--->4' . print_r($items,true));
+    return $items;
+}
+
 ?>
