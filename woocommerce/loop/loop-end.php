@@ -21,5 +21,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 </ul>
 </div>
+<div class="col-md-1 col-sm-2 col-2 side-column-right">
+    <div class="grid-cell-right-1 bg_color_rose"></div>
+    <div class="grid-cell-right-2 bg_color_blue"></div>
+    <div class="grid-cell-right-3 bg_color_rose"></div>
+    <div class="grid-cell-right-4 bg_color_green"></div>
+    <div class="grid-cell-right-5 bg_color_red"></div>
+    <div class="grid-cell-right-6 bg_color_rose"></div>
+    <div class="grid-cell-right-7 bg_color_white"></div>
+    <div class="grid-cell-right-8 bg_color_blue last"></div>
+
+</div>
 </div>
 </div>
