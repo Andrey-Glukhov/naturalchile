@@ -1098,6 +1098,26 @@ td.product-subtotal {
     border-bottom: 5px solid #000;
 }
 
+.login-column>h2,
+.register-column>h2 {
+    font-family: '13552', serif;
+    color: #000;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    padding: 0 0 0 20px;
+}
+
+.woocommerce-form.woocommerce-form-login.login {
+    border: none;
+}
+
+.woocommerce-form.woocommerce-form-login.login>p.woocommerce-form-row.woocommerce-form-row--wide.form-row.form-row-wide,
+.woocommerce-form.woocommerce-form-login.login>p.woocommerce-form-row.woocommerce-form-row--wide.form-row.form-row-wide,
+.woocommerce-form.woocommerce-form-login.login>p.form-row {
+    display: flex;
+    flex-direction: column;
+}
+
 
 /* ----------- cart ----------------*/
 

@@ -30,7 +30,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
     </div>
 
     <div class="u-columns row" id="customer_login">
-	<div class="col-md-1 col-sm-2 col-2 side-column-left">
+        <div class="col-md-1 col-sm-2 col-2 side-column-left">
             <div class="grid-cell-left-1 bg_color_red"></div>
             <div class="grid-cell-left-2 bg_color_white"></div>
             <div class="grid-cell-left-3 bg_color_black"></div>
@@ -43,7 +43,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
             <div class="grid-cell-left-10 bg_color_rose last"></div>
         </div>
 
-        <div class="u-column1 col-md-5 col-sm-8 col-8">
+        <div class="u-column1 login-column col-md-5 col-sm-8 col-8">
 
             <?php endif; ?>
 
@@ -93,7 +93,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
         </div>
 
-        <div class="u-column2 col-md-5 col-sm-8 col-8">
+        <div class="u-column2 register-column col-md-5 col-sm-8 col-8">
 
             <h2><?php esc_html_e( 'Register', 'woocommerce' ); ?></h2>
 
@@ -152,17 +152,16 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
             </form>
 
         </div>
-		<div class="col-md-1 col-sm-2 col-2 side-column-left">
-            <div class="grid-cell-left-1 bg_color_red"></div>
-            <div class="grid-cell-left-2 bg_color_white"></div>
-            <div class="grid-cell-left-3 bg_color_black"></div>
-            <div class="grid-cell-left-4 bg_color_rose"></div>
-            <div class="grid-cell-left-5 bg_color_white"></div>
-            <div class="grid-cell-left-6 bg_color_green"></div>
-            <div class="grid-cell-left-7 bg_color_rose"></div>
-            <div class="grid-cell-left-8 bg_color_red"></div>
-            <div class="grid-cell-left-9 bg_color_white"></div>
-            <div class="grid-cell-left-10 bg_color_rose last"></div>
+		<div class="col-md-1 col-sm-2 col-2 side-column-right">
+            <div class="grid-cell-right-1 bg_color_rose"></div>
+            <div class="grid-cell-right-2 bg_color_blue"></div>
+            <div class="grid-cell-right-3 bg_color_rose"></div>
+            <div class="grid-cell-right-4 bg_color_green"></div>
+            <div class="grid-cell-right-5 bg_color_red"></div>
+            <div class="grid-cell-right-6 bg_color_rose"></div>
+            <div class="grid-cell-right-7 bg_color_white"></div>
+            <div class="grid-cell-right-8 bg_color_blue last"></div>
+
         </div>
 
     </div>
