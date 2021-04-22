@@ -25,16 +25,16 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 }
 ?>
 <li class="col-md-6 col-sm-12 col-12 product-list changed" <?php wc_product_class( '', $product ); ?>>
-	<div class="row no_margin_row">
-	<?php
+    <div class="row no_margin_row">
+        <?php
 	/**
 	 * Hook: woocommerce_before_shop_loop_item.
 	 *
 	 * @hooked woocommerce_template_loop_product_link_open - 10
 	 */
-	?> 
-	<div class="product_image_wrapper col-6">
-	<?php do_action( 'woocommerce_before_shop_loop_item' );
+	?>
+        <div class="product_image_wrapper col-6">
+            <?php do_action( 'woocommerce_before_shop_loop_item' );
 
 	/**
 	 * Hook: woocommerce_before_shop_loop_item_title.
@@ -74,10 +74,11 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 * @hooked woocommerce_template_loop_price - 10
 	 */
 	do_action( 'woocommerce_after_shop_loop_item_title' );
-	?> 
-	</div>
-	<div class="product_description_wrapper col-6">
-	<?php do_action( 'woocommerce_shop_loop_item_title' );
+	?>
+        </div>
+        <div class="product_description_wrapper col-6">
+            <div class="product_content_wraper">
+                <?php do_action( 'woocommerce_shop_loop_item_title' );
 	/**
 	 * Hook: woocommerce_after_shop_loop_item.
 	 *
@@ -86,6 +87,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 */
 	do_action( 'woocommerce_after_shop_loop_item' );
 	?>
-	</div>
-	</div>
+            </div>
+        </div>
+    </div>
 </li>
