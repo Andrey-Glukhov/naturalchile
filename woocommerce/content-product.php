@@ -24,7 +24,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 ?>
-<li class="col-md-6 col-sm-12 col-12 product-list" <?php wc_product_class( '', $product ); ?>>
+<li class="col-md-6 col-sm-12 col-12 product-list changed" <?php wc_product_class( '', $product ); ?>>
 	<div class="row">
 	<?php
 	/**
