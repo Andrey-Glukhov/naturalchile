@@ -4,4 +4,5 @@ jQuery(function($) {
         $('[name="update_cart"]').trigger('click');
     });
 
+
 });
