@@ -1042,16 +1042,20 @@ a.woocommerce-LoopProduct-link.woocommerce-loop-product__link>img {
     border-right: 5px solid #000;
 }
 
-.product_description_wrapper>form.cart {
-    display: flex;
-}
-
 .product_description_wrapper>form.cart>button.button {
     background-color: #fff;
     color: #000;
     font-family: '13552', serif;
     font-size: 1.1rem;
     text-transform: uppercase;
+    border: 5px solid #000;
+    border-radius: 0;
+    margin-top: 20px;
+}
+
+.product_description_wrapper>form.cart>button.button:hover {
+    background: transparent;
+    color: #000;
 }
 
 .woocommerce-notices-wrapper {
@@ -1101,6 +1105,104 @@ td.product-subtotal {
     border-right: none;
     border-left: none;
     border-bottom: 5px solid #000;
+}
+
+.login-column>h2,
+.register-column>h2 {
+    font-family: '13552', serif;
+    color: #000;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    padding: 0 0 0 20px;
+}
+
+.woocommerce-form.woocommerce-form-login.login {
+    border: none;
+}
+
+.woocommerce-form.woocommerce-form-login.login>p.woocommerce-form-row.woocommerce-form-row--wide.form-row.form-row-wide,
+.woocommerce-form.woocommerce-form-login.login>p.woocommerce-form-row.woocommerce-form-row--wide.form-row.form-row-wide,
+.woocommerce-form.woocommerce-form-login.login>p.form-row {
+    display: flex;
+    flex-direction: column;
+}
+
+p.woocommerce-form-row.woocommerce-form-row--wide.form-row.form-row-wide {
+    font-family: '13552', serif;
+    color: #000;
+    font-size: 1.1rem;
+}
+
+p.woocommerce-form-row.woocommerce-form-row--wide.form-row.form-row-wide .required {
+    display: none;
+}
+
+.woocommerce form .form-row input.input-text {
+    padding: 8px 10px;
+    border: 5px solid #000;
+}
+
+.woocommerce-form.woocommerce-form-register.register {
+    border: none;
+}
+
+p.pass_email,
+.woocommerce-privacy-policy-text>p,
+.woocommerce-form__label.woocommerce-form__label-for-checkbox.woocommerce-form-login__rememberme>span {
+    font-family: '13552', serif;
+    color: #000;
+    font-size: 0.9rem;
+}
+
+.woocommerce-privacy-policy-text>p>a,
+.woocommerce-LostPassword.lost_password>a {
+    font-family: '13552', serif;
+    color: #000;
+    font-size: 0.9rem;
+    text-decoration: underline;
+}
+
+.woocommerce .woocommerce-form-login .woocommerce-form-login__submit,
+.woocommerce .woocommerce-Button.woocommerce-button.button.woocommerce-form-register__submit {
+    font-family: '13552', serif;
+    color: #000;
+    font-size: 1rem;
+    border: 5px solid #000;
+    background: transparent;
+    width: fit-content;
+    text-transform: uppercase;
+}
+
+.woocommerce .woocommerce-form-login .woocommerce-form-login__submit:hover {
+    color: #000;
+    background: transparent;
+}
+
+.woocommerce .woocommerce-Button.woocommerce-button.button.woocommerce-form-register__submit:hover {
+    color: #000;
+    background: transparent;
+}
+
+.woocommerce-form__input.woocommerce-form__input-checkbox {
+    border: 5px solid #000;
+}
+
+h2.woocommerce-loop-product__title {
+    font-family: '13552', serif;
+    color: #000;
+    font-size: 1rem;
+}
+
+.product_description_wrapper>a:hover {
+    text-decoration: none;
+}
+
+li.product-list.changed {
+    display: block;
+}
+
+.row.no_margin_row {
+    margin: 0;
 }
 
 
