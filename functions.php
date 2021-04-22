@@ -201,4 +201,12 @@ function child_theme_menu_items($items, $args) {
     return $items;
 }
 
+// Cange add to cart button text
+add_filter('woocommerce_product_add_to_cart_text', 'n_chile_add_to_cart_text');
+
+function n_chile_add_to_cart_text($text) {
+  return  __( 'Buy', 'woocommerce' );
+
+}
+
 ?>
