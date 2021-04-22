@@ -1062,6 +1062,7 @@ td.product-remove,
 td.product-thumbnail,
 td.product-name,
 td.product-price,
+td.product-total,
 td.product-quantity,
 td.product-subtotal {
     border-top: 5px solid #000 !important;
@@ -1069,6 +1070,10 @@ td.product-subtotal {
 
 .woocommerce table.shop_table {
     border: none;
+}
+
+.woocommerce table.shop_table {
+    border-collapse: collapse;
 }
 
 .product-name,
