@@ -25,7 +25,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 }
 ?>
 <li class="col-md-6 col-sm-12 col-12 product-list changed" <?php wc_product_class( '', $product ); ?>>
-	<div class="row">
+	<div class="row no_margin_row">
 	<?php
 	/**
 	 * Hook: woocommerce_before_shop_loop_item.

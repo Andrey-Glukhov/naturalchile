@@ -1053,6 +1053,11 @@ a.woocommerce-LoopProduct-link.woocommerce-loop-product__link>img {
     margin-top: 20px;
 }
 
+.product_description_wrapper>form.cart>button.button:hover {
+    background: transparent;
+    color: #000;
+}
+
 .woocommerce-notices-wrapper {
     display: none;
 }
@@ -1189,6 +1194,10 @@ h2.woocommerce-loop-product__title {
 
 li.product-list.changed {
     display: block;
+}
+
+.row.no_margin_row {
+    margin: 0;
 }
 
 
