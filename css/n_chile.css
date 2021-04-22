@@ -72,6 +72,7 @@ button:focus {
 .col-menu-wrapper {
     margin-top: auto;
     margin-bottom: auto;
+    position: relative;
 }
 
 nav.navbar {
@@ -87,6 +88,79 @@ nav.navbar {
 
 #menu-item-26>a>.menu-image-title-after.menu-image-title {
     display: none;
+}
+
+.col-icon-wrapper ul {
+    display: none;
+    list-style: none;
+    position: absolute;
+    top: 50%;
+    right: 40px;
+}
+
+.col-icon-wrapper ul li {
+    margin: 0 10px;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:hover {
+    outline: none;
+}
+
+animated-icon1 {
+    width: 27px;
+    height: 27px;
+    margin: 0px;
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+.animated-icon1 span {
+    display: block;
+    position: relative;
+    height: 3px;
+    width: 100%;
+    left: 0;
+    transform: rotate(0deg);
+    transition: all .25s ease-in-out;
+    background-color: #ec4c2e;
+}
+
+.animated-icon1 span:nth-child(1) {
+    top: 3px;
+}
+
+.animated-icon1 span:nth-child(2) {
+    top: 12px;
+}
+
+.animated-icon1 span:nth-child(3) {
+    top: 21px;
+}
+
+.animated-icon1.open span:nth-child(1) {
+    top: 11px;
+    right: 0;
+    transform: rotate(135deg);
+}
+
+.animated-icon1.open span:nth-child(2) {
+    right: 0;
+    opacity: 0;
+    right: -60px;
+}
+
+.animated-icon1.open span:nth-child(3) {
+    top: 11px;
+    right: 0;
+    -webkit-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    transform: rotate(-135deg);
 }
 
 
@@ -1133,6 +1207,17 @@ td.product-subtotal {
     .content-column {
         padding: 0 15px;
     }
+    nav.navbar #menu-item-998,
+    nav.navbar #menu-item-999 {
+        display: none;
+    }
+    .col-menu-wrapper>nav.navbar {
+        position: absolute;
+        top: -55px;
+    }
+    .col-icon-wrapper ul {
+        display: inline-flex;
+    }
 }
 
 
@@ -1148,6 +1233,17 @@ td.product-subtotal {
     }
     .content-column {
         padding: 0 15px;
+    }
+    nav.navbar #menu-item-998,
+    nav.navbar #menu-item-999 {
+        display: none;
+    }
+    .col-menu-wrapper>nav.navbar {
+        position: absolute;
+        top: -55px;
+    }
+    .col-icon-wrapper ul {
+        display: inline-flex;
     }
 }
 
