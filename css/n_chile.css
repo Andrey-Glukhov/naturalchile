@@ -1185,7 +1185,248 @@ td.product-subtotal {
 }
 
 
-/* ----------- shipping ----------------*/
+/* ----------- checkout ----------------*/
+
+.woocommerce form.checkout .form-row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.woocommerce form.checkout .form-row.place-order {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.checkout-container {
+    min-height: 80vh;
+    margin-top: 160px;
+    margin-bottom: 60px;
+}
+
+.woocommerce form .form-row label,
+.woocommerce-page form .form-row label,
+.woocommerce form h3 {
+    font-family: "ArcherPro-Medium", serif;
+    font-weight: 700;
+}
+
+.woocommerce-page form .form-row {
+    font-family: "ArcherPro-Medium", serif;
+}
+
+.woocommerce form #payment {
+    background-color: #fff;
+}
+
+.woocommerce form #payment>ul>li {
+    font-family: "ArcherPro-Medium", serif;
+    background-color: #fff;
+}
+
+.woocommerce-error,
+.woocommerce-info,
+.woocommerce-message {
+    border: none;
+}
+
+#payment>div>div>div.woocommerce-privacy-policy-text>p>a,
+#payment>div>div>p>label>span.woocommerce-terms-and-conditions-checkbox-text>a {
+    color: #ec4c2e;
+}
+
+nav.woocommerce-pagination {
+    position: inherit;
+}
+
+.wc_payment_method.payment_method_paypal>label>img {
+    display: none;
+}
+
+.wc_payment_method.payment_method_paypal>label>.about_paypal {
+    display: none;
+}
+
+.wc_payment_method.payment_method_stripe>label>img {
+    display: none;
+}
+
+.wc_payment_method.payment_method_stripe_ideal>label>img {
+    display: none;
+}
+
+.wc_payment_methods.payment_methods.methods {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    margin-bottom: 50px !important;
+    margin-top: 50px !important;
+    border-bottom: none !important;
+}
+
+#payment_method_paypal,
+#payment_method_stripe,
+#payment_method_stripe_ideal,
+.woocommerce-checkout #payment div.payment_box.payment_method_stripe_ideal {
+    display: none !important;
+}
+
+.woocommerce-checkout #payment ul.payment_methods li.wc_payment_method.payment_method_stripe_ideal>label {
+    background-image: url(https://bobbievisser.com/wp-content/uploads/2021/04/ideal-brands_2-01.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 35px;
+}
+
+.woocommerce-checkout #payment ul.payment_methods li.wc_payment_method.payment_method_stripe_ideal input:checked+label {
+    background-image: url(https://bobbievisser.com/wp-content/uploads/2021/04/ideal-brands_red-01.png);
+}
+
+.woocommerce-checkout #payment ul.payment_methods li.wc_payment_method.payment_method_stripe>label {
+    background-image: url(https://bobbievisser.com/wp-content/uploads/2021/04/credit-card_b-01.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 35px;
+}
+
+.woocommerce-checkout #payment ul.payment_methods li.wc_payment_method.payment_method_stripe input:checked+label {
+    background-image: url(https://bobbievisser.com/wp-content/uploads/2021/04/credit-card-solid_red-01.png);
+}
+
+.woocommerce-checkout #payment ul.payment_methods li.wc_payment_method.payment_method_paypal>label {
+    background-image: url(https://bobbievisser.com/wp-content/uploads/2021/04/cc-paypal-b-01.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 35px;
+}
+
+.woocommerce-checkout #payment ul.payment_methods li.wc_payment_method.payment_method_paypal input:checked+label {
+    background-image: url(https://bobbievisser.com/wp-content/uploads/2021/04/cc-paypal-brands_red-01.png);
+}
+
+.wc_payment_method.payment_method_stripe_ideal>label,
+.wc_payment_method.payment_method_stripe>label,
+.wc_payment_method.payment_method_paypal>label {
+    padding-top: 35px;
+    margin-bottom: 0 !important;
+}
+
+#stripe-payment-data {
+    position: absolute;
+}
+
+.woocommerce-checkout #payment div.payment_box {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    text-align: center;
+    background: transparent !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+#stripe-payment-data {
+    padding: 10px;
+    background-color: #FC502E;
+    color: #ffffff;
+    position: relative;
+}
+
+.woocommerce-checkout #payment div.payment_box::before {
+    display: none;
+}
+
+#stripe-payment-data>p {
+    display: none;
+}
+
+#shipping_method>li>input:checked+label {
+    color: #FC502E !important;
+    border: 1px solid #FC502E;
+    padding: 5px;
+}
+
+#shipping_method>li>input:checked+label {
+    color: #FC502E !important;
+    border: 1px solid #FC502E;
+    padding: 5px;
+}
+
+#shipping_method>li>label,
+#shipping_method>li {
+    cursor: pointer !important;
+}
+
+#shipping_method_0_local_pickup2,
+#shipping_method_0_flat_rate3 {
+    display: none;
+}
+
+.woocommerce .shipping-calculator-form>p>button.button {
+    background: transparent;
+    border: 1px solid #FC502E;
+    border-radius: 0;
+    color: #FC502E;
+}
+
+.woocommerce #place_order {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+}
+
+.woocommerce .quantity .qty {
+    border-top-style: solid;
+    border: 1px solid;
+}
+
+.woocommerce .quantity .qty:focus {
+    outline: 0 !important;
+}
+
+#billing_first_name,
+#billing_last_name,
+#billing_address_1,
+#billing_postcode,
+#billing_city,
+#billing_phone,
+#billing_email,
+#billing_state {
+    border-radius: 0;
+    border: 1px solid #000;
+}
+
+.woocommerce .woocommerce-checkout-review-order img,
+.woocommerce-page .woocommerce-checkout-review-order img {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+}
+
+.ts-product-image {
+    display: inline-block;
+}
+
+.woocommerce button.button.alt {
+    background-color: #fff;
+    color: #000000;
+    border: #000000 3px solid;
+    font-family: '13552', serif;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
 
 
 /* ----------- footer ----------------*/
