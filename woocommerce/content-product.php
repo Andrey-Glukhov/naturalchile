@@ -41,7 +41,31 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 * @hooked woocommerce_show_product_loop_sale_flash - 10
 	 * @hooked woocommerce_template_loop_product_thumbnail - 10
 	 */
-	do_action( 'woocommerce_before_shop_loop_item_title' );
+	if (!empty($product->get_id())) { 
+		
+		$wr360config = esc_url(get_post_meta($product->get_id(), "_wr360config", true));
+    	$wr360root = esc_url(get_post_meta($product->get_id(), "_wr360root", true));
+		 error_log('prod-----' . print_r($product->get_name(),true));	
+		 error_log('prod1-----' . print_r($wr360config,true));	
+		 error_log('prod2-----' . print_r($wr360root,true));	
+		if (!empty($wr360config)) {
+			$code_srt = '[wr360embed name="' . $product->get_slug() . '" width="100%" height="500px" config="' . $wr360root . $wr360config . '"]';
+			if ( shortcode_exists( 'wr360embed' ) ) {
+				error_log('prod4444-----' . print_r($code_srt,true));	
+			}
+			echo do_shortcode($code_srt);
+			error_log('prod3-----' . print_r($code_srt,true));	
+		} else {
+			do_action( 'woocommerce_before_shop_loop_item_title' );
+		}
+
+	}
+   
+
+    //     $wr360config = esc_url(get_post_meta($post->ID, "_wr360config", true));
+    //     $wr360root = esc_url(get_post_meta($post->ID, "_wr360root", true));
+	//error_log('prod1-----' . print_r($product,true));
+	//do_action( 'woocommerce_before_shop_loop_item_title' );
 
 	/**
 	 * Hook: woocommerce_shop_loop_item_title.

@@ -16,7 +16,7 @@ get_header(); ?>
     </div>
 <div class="row container-row">
     <div class="side-column-left col-md-1 col-sm-2 col-2" >
-        <div class="grid-cell-left-1 bg_color_red" ></div>
+        <div class="grid-cell-left-1 bg_color_green" ></div> 
         <div class="grid-cell-left-2 bg_color_white" ></div>
         <div class="grid-cell-left-3 bg_color_black"></div>
         <div class="grid-cell-left-4 bg_color_rose"></div>

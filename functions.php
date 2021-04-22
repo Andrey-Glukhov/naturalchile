@@ -32,6 +32,7 @@ function n_chile_theme_setup(){
   add_theme_support('menus');
   register_nav_menu('primary', 'Primary Header Navigation');
 }
+
 function mytheme_add_woocommerce_support() {
     add_theme_support( 'woocommerce' );
 }
@@ -60,19 +61,19 @@ function hide_shop_page_title(){
 	return false;
 }
 
-add_filter('single_product_archive_thumbnail_size', 'set_picture_size');
+// add_filter('single_product_archive_thumbnail_size', 'set_picture_size');
 
- function set_picture_size()
-{
-	$result = 'full_size';
-	return $result;
-}
+//  function set_picture_size()
+// {
+// 	$result = 'full_size';
+// 	return $result;
+// }
 // Move checkout payment form order review to after order review
 remove_action( 'woocommerce_checkout_order_review', 'woocommerce_checkout_payment', 20 );
 add_action( 'woocommerce_checkout_after_order_review', 'woocommerce_checkout_payment', 10 );
 
 // Add product thumbnail to checkout order review
-add_filter( 'woocommerce_cart_item_name', 'bv_image_on_checkout', 10, 3 );
+add_filter( 'woocommerce_cart_item_name', 'n_chile_image_on_checkout', 10, 3 );
 
 function n_chile_image_on_checkout( $name, $cart_item, $cart_item_key ) {  
 
@@ -98,6 +99,10 @@ function n_chile_image_on_checkout( $name, $cart_item, $cart_item_key ) {
 }
 add_filter( 'woocommerce_loop_add_to_cart_link', 'quantity_inputs_for_woocommerce_loop_add_to_cart_link', 10, 2 );
 function quantity_inputs_for_woocommerce_loop_add_to_cart_link( $html, $product ) {
+  	/**
+	 * Make quantity inputs fot add to cart link 
+	 *
+	 */
 	if ( $product && $product->is_type( 'simple' ) && $product->is_purchasable() && $product->is_in_stock() && ! $product->is_sold_individually() ) {
 		$html = '<form action="' . esc_url( $product->add_to_cart_url() ) . '" class="cart" method="post" enctype="multipart/form-data">';
 		$html .= woocommerce_quantity_input( array(), $product, false );
@@ -123,7 +128,7 @@ if ( ! function_exists( 'n_chile_cart_link' ) ) {
 		?>
 
 <li id="menu-item-999" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-7 current_page_item menu-item-999">
-  <a href="<?php echo esc_url( wc_get_cart_url() ); ?>" aria-current="page">
+  <a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" aria-current="page">
     <svg class="svg-inline--fa fa-shopping-basket fa-w-18 dashicons after-menu-image-icons" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="shopping-basket" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M576 216v16c0 13.255-10.745 24-24 24h-8l-26.113 182.788C514.509 462.435 494.257 480 470.37 480H105.63c-23.887 0-44.139-17.565-47.518-41.212L32 256h-8c-13.255 0-24-10.745-24-24v-16c0-13.255 10.745-24 24-24h67.341l106.78-146.821c10.395-14.292 30.407-17.453 44.701-7.058 14.293 10.395 17.453 30.408 7.058 44.701L170.477 192h235.046L326.12 82.821c-10.395-14.292-7.234-34.306 7.059-44.701 14.291-10.395 34.306-7.235 44.701 7.058L484.659 192H552c13.255 0 24 10.745 24 24zM312 392V280c0-13.255-10.745-24-24-24s-24 10.745-24 24v112c0 13.255 10.745 24 24 24s24-10.745 24-24zm112 0V280c0-13.255-10.745-24-24-24s-24 10.745-24 24v112c0 13.255 10.745 24 24 24s24-10.745 24-24zm-224 0V280c0-13.255-10.745-24-24-24s-24 10.745-24 24v112c0 13.255 10.745 24 24 24s24-10.745 24-24z"></path></svg><!-- <span class="dashicons fas fa-shopping-basket after-menu-image-icons"></span> Font Awesome fontawesome.com -->
     <span class="menu-image-title-after menu-image-title">Cart</span>
     <?php if (WC()->cart->get_cart_contents_count() > 0) { ?>
@@ -147,6 +152,9 @@ if ( ! function_exists( 'n_chile_cart_available' ) ) {
 add_filter('woocommerce_add_to_cart_fragments', 'n_chile_add_refreshed_fragments');
 
 function n_chile_add_refreshed_fragments($fragments) {
+  /**
+	 * Get Html fragments to update cart icon
+	 */
   ob_start();
 
   n_chile_cart_link();
@@ -157,19 +165,35 @@ function n_chile_add_refreshed_fragments($fragments) {
   return $new_fragments;
 }
 
+function n_chile_about_link() {
+  $about_page = get_page_by_path('about');
+  if ( ! $about_page ) {
+    return;
+  }?>
+<li id="menu-item-998" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26">
+  <a href="<?php echo get_permalink($about_page->id); ?>">
+    <span class="dashicons dashicons-admin-users after-menu-image-icons"></span>
+    <span class="menu-image-title-after menu-image-title">My account</span>
+  </a>
+</li>
+<?php }
+
+
 add_filter( 'wp_nav_menu_items', 'child_theme_menu_items', 10, 2);
 
 function child_theme_menu_items($items, $args) {
+  /**
+	 * Insert  items to menu fragment 
+	 */
     // get array of '<li> ... </li>' strings
     preg_match_all('/<\s*?li\b[^>]*>(.*?)<\/li\b[^>]*>/s', $items, $items_array );
-    error_log('--->1' . print_r($items,true));
-    error_log('--->3' . print_r($items_array,true));
     ob_start();
+    n_chile_about_link();
     n_chile_cart_link();
-    $cart_part = ob_get_clean();
+        $cart_part = ob_get_clean();
     $items_array[0][] = $cart_part;
     $items = implode('', $items_array[0]);
-    error_log('--->4' . print_r($items,true));
+    
     return $items;
 }
 
