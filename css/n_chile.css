@@ -1057,6 +1057,28 @@ td.product-subtotal {
     background: transparent;
 }
 
+.woocommerce a.remove {
+    color: #000 !important;
+}
+
+.woocommerce a.remove:hover {
+    color: #000 !important;
+    background: transparent !important;
+}
+
+.woocommerce-cart table.cart td.product-name>a {
+    font-family: '13552', serif;
+    color: #000;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover {
+    background: transparent;
+    color: #000;
+}
+
 
 /* ----------- account ----------------*/
 
