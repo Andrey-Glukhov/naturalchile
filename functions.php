@@ -169,12 +169,13 @@ function n_chile_add_refreshed_fragments($fragments) {
 }
 
 function n_chile_about_link() {
-  $about_page = get_page_by_path('about');
+  $about_page = get_page_by_path('my-account');
+  
   if ( ! $about_page ) {
     return;
   }?>
 <li id="menu-item-998" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26">
-  <a href="<?php echo get_permalink($about_page->id); ?>">
+  <a href="<?php echo get_permalink($about_page->ID); ?>">
     <span class="dashicons dashicons-admin-users after-menu-image-icons"></span>
     <span class="menu-image-title-after menu-image-title">My account</span>
   </a>
