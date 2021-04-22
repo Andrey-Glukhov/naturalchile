@@ -3,7 +3,7 @@
         <div class="col-md-5 col-sm-4 order-md-1 order-3 col-icon-wrapper">
             <ul>
             <?php n_chile_about_link();
-            n_chile_cart_link(); ?>
+                    n_chile_cart_link(); ?>
             </ul>
         </div>
         <div class="col-md-2 col-sm-4 order-2">
