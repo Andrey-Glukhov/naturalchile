@@ -101,6 +101,7 @@ function n_chile_image_on_checkout( $name, $cart_item, $cart_item_key ) {
     return $image . $name;
 
 }
+
 add_filter( 'woocommerce_loop_add_to_cart_link', 'quantity_inputs_for_woocommerce_loop_add_to_cart_link', 10, 2 );
 function quantity_inputs_for_woocommerce_loop_add_to_cart_link( $html, $product ) {
   	/**
@@ -108,9 +109,9 @@ function quantity_inputs_for_woocommerce_loop_add_to_cart_link( $html, $product 
 	 *
 	 */
 	if ( $product && $product->is_type( 'simple' ) && $product->is_purchasable() && $product->is_in_stock() && ! $product->is_sold_individually() ) {
-		$html = '<form action="' . esc_url( $product->add_to_cart_url() ) . '" class="cart" method="post" enctype="multipart/form-data">';
+		$html = '<form action="' . esc_url( $product->add_to_cart_url() ) . '" class="cart" method="post" enctype="multipart/form-data"><div class="add_quantity_wrapper"><button class="var_quantity-arrow-minus"> - </button>	';
 		$html .= woocommerce_quantity_input( array(), $product, false );
-		$html .= '<button type="submit" class="button alt">' . esc_html( $product->add_to_cart_text() ) . '</button>';
+		$html .= '<button class="var_quantity-arrow-plus"> + </button></div><button type="submit" class="button alt">' . esc_html( $product->add_to_cart_text() ) . '</button>';
 		$html .= '</form>';
 	}
 	return $html;
@@ -204,10 +205,11 @@ function child_theme_menu_items($items, $args) {
 
 // Cange add to cart button text
 add_filter('woocommerce_product_add_to_cart_text', 'n_chile_add_to_cart_text');
-
+add_filter('woocommerce_product_single_add_to_cart_text', 'n_chile_add_to_cart_text'); 
 function n_chile_add_to_cart_text($text) {
   return  __( 'Buy', 'woocommerce' );
 
 }
+
 
 ?>
