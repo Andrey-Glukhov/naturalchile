@@ -88,6 +88,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	do_action( 'woocommerce_after_shop_loop_item' );
 	?>
             </div>
+			<?php do_action( 'woocommerce_after_shop_loop_item_description' ); ?>
         </div>
     </div>
 </li>

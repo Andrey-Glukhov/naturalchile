@@ -55,6 +55,8 @@ remove_action('woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
+//Rmove single prodict meta
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
 
 //Remove shop page ???
 //remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
@@ -211,5 +213,26 @@ function n_chile_add_to_cart_text($text) {
 
 }
 
+function woocommerce_after_shop_loop_item_title_short_description() {
+	global $product;
+	if ( ! $product->get_short_description() ) return;
+	?>
+	<div itemprop="description">
+		<?php echo apply_filters( 'woocommerce_short_description', $product->get_short_description() ) ?>
+	</div>
+	<?php
+}
+add_action('woocommerce_after_shop_loop_item_description', 'woocommerce_after_shop_loop_item_title_short_description', 5);
+
+function woocommerce_after_shop_loop_item_title_full_description() {
+	global $product;
+	if ( ! $product->get_short_description() ) return;
+	?>
+	<div itemprop="description">
+		<?php echo apply_filters( 'woocommerce_short_description', $product->get_description() ) ?>
+	</div>
+	<?php
+}
+add_action('woocommerce_after_shop_loop_item_full_description', 'woocommerce_after_shop_loop_item_title_full_description', 5);
 
 ?>
