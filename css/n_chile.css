@@ -1358,12 +1358,12 @@ li.product-list.changed {
 .woocommerce form .form-row label,
 .woocommerce-page form .form-row label,
 .woocommerce form h3 {
-    font-family: "ArcherPro-Medium", serif;
+    font-family: '13552', serif;
     font-weight: 700;
 }
 
 .woocommerce-page form .form-row {
-    font-family: "ArcherPro-Medium", serif;
+    font-family: '13552', serif;
 }
 
 .woocommerce form #payment {
@@ -1371,7 +1371,7 @@ li.product-list.changed {
 }
 
 .woocommerce form #payment>ul>li {
-    font-family: "ArcherPro-Medium", serif;
+    font-family: '13552', serif;
     background-color: #fff;
 }
 
