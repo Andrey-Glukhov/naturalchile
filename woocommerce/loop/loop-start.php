@@ -38,5 +38,5 @@ if ( ! defined( 'ABSPATH' ) ) {
             <div class="grid-cell-left-9 bg_color_white"></div>
             <div class="grid-cell-left-10 bg_color_rose last"></div>
         </div>
-        <div class="col-md-10 col-sm-8 col-8">
+        <div class="col-md-10 col-sm-8 col-8 single-product-wrapper">
             <ul class="row products columns-<?php echo esc_attr( wc_get_loop_prop( 'columns' ) ); ?>">

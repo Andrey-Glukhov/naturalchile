@@ -33,7 +33,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 * @hooked woocommerce_template_loop_product_link_open - 10
 	 */
 	?>
-        <div class="product_image_wrapper col-6">
+        <div class="product_image_wrapper col-sm-6 col-12">
             <?php do_action( 'woocommerce_before_shop_loop_item' );
 
 	/**
@@ -76,7 +76,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	do_action( 'woocommerce_after_shop_loop_item_title' );
 	?>
         </div>
-        <div class="product_description_wrapper col-6">
+        <div class="product_description_wrapper col-sm-6 col-12">
             <div class="product_content_wraper">
                 <?php do_action( 'woocommerce_shop_loop_item_title' );
 	/**
