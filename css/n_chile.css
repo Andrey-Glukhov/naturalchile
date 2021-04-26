@@ -172,7 +172,21 @@ animated-icon1 {
     background-color: #000;
 }
 
+.upper_home_grid {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+}
 
+.upper_home_grid>div {
+    border-right: 6px solid #000;
+    border-left: 6px solid #000;
+    border-top: 6px solid #000;
+    border-bottom: 6px solid #000;
+}    
 /* .home-grid-wraper div {
     transform-origin: 0 0;
 } */
@@ -633,6 +647,7 @@ animated-icon1 {
 
 .home-container {
     min-height: 100vh;
+    position: relative;
 }
 
 .container-row {
