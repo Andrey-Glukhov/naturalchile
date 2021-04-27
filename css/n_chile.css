@@ -162,6 +162,10 @@ animated-icon1 {
   transform: rotate(-135deg);
 }
 
+.dashicons, .dashicons-before:before { 
+  text-decoration: none;
+}
+
 /* ----------- home ----------------*/
 
 .home-grid-wraper {

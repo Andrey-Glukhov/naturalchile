@@ -32,7 +32,7 @@ jQuery(function($) {
       //window.load = function() {
         window.addEventListener('load', setGrid, false);
         window.addEventListener('resize', setGrid, false);
-        var gridTime1 = gsap.timeline({repeat: -1, repeatDelay: 1, yoyo: 1});
+        var gridTime1 = gsap.timeline({repeat: -1, repeatDelay: 3, yoyo: 1});
         var gridTime2 = gsap.timeline({repeat: -1, repeatDelay: 2, yoyo: 1});
         var animate1 = ['upper-cell-2', 'upper-cell-10'];
         var animate2 = ['upper-cell-13'];
@@ -79,17 +79,18 @@ jQuery(function($) {
             divNewGrid.append(newCell);
             if (animate1.includes(newClassNumber)) {
               newCell.style.zIndex = '10';
-              gridTime1.to(newCell, {width: 2* divChild.offsetWidth, duration: 3});
-            } else if (animate2.includes(newClassNumber)) {
-              newCell.style.zIndex = '10';
-              gridTime1.to(newCell, {height: 2* divChild.offsetHeight, duration: 3});
-            } else if (animate3.includes(newClassNumber)) {
-              newCell.style.zIndex = '10';
-              gridTime2.to(newCell, {height: 2* divChild.offsetHeight, duration: 3});
-            } else if (animate4.includes(newClassNumber)) {
-              newCell.style.zIndex = '10';
-              gridTime2.to(newCell, {height: 2* divChild.offsetHeight, duration: 3});
-            }
+              gridTime1.to(newCell, {borderRight: '12px solid #000', duration: 0.1});
+              gridTime1.to(newCell, {width: 2* divChild.offsetWidth+6, duration: 3});
+            } //else if (animate2.includes(newClassNumber)) {
+            //   newCell.style.zIndex = '10';
+            //   gridTime1.to(newCell, {height: 2* divChild.offsetHeight, duration: 3});
+            // } else if (animate3.includes(newClassNumber)) {
+            //   newCell.style.zIndex = '10';
+            //   gridTime2.to(newCell, {height: 2* divChild.offsetHeight, duration: 3});
+            // } else if (animate4.includes(newClassNumber)) {
+            //   newCell.style.zIndex = '10';
+            //   gridTime2.to(newCell, {height: 2* divChild.offsetHeight, duration: 3});
+            // }
           });
 
       }
