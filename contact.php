@@ -35,7 +35,6 @@ if ($q_home -> have_posts() ) : while ( $q_home -> have_posts() ) : $q_home -> t
         <div class="contact-cell-right-5 bg_color_rose"></div>
         <div class="contact-cell-right-6 bg_color_red"></div>
         <div class="contact-cell-right-7 bg_color_black"></div>
-
         </div>
     </div>
 

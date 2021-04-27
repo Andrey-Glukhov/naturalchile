@@ -38,7 +38,7 @@ do_action( 'woocommerce_before_cart' ); ?>
             <div class="grid-cell-left-9 bg_color_white"></div>
             <div class="grid-cell-left-10 bg_color_rose last"></div>
         </div>
-        <div class="col-md-10 col-sm-8 col-8">
+        <div class="col-md-10 col-sm-8 col-8 cart_content_wrapper">
 
             <form class="woocommerce-cart-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
                 <?php do_action( 'woocommerce_before_cart_table' ); ?>

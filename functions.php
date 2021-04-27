@@ -95,7 +95,7 @@ function n_chile_image_on_checkout( $name, $cart_item, $cart_item_key ) {
     $thumbnail = $_product->get_image();
 
     /* Add wrapper to image and add some css */
-    $image = '<div class="ts-product-image" style="width: 60px; height: 40px; padding-right: 7px; vertical-align: middle; display: inline-block;">'
+    $image = '<div class="ts-product-image" style="width: 60px; height: 120px; padding-right: 7px; vertical-align: middle; display: inline-block;">'
                 . $thumbnail .
             '</div>';
 
@@ -217,7 +217,7 @@ function woocommerce_after_shop_loop_item_title_short_description() {
 	global $product;
 	if ( ! $product->get_short_description() ) return;
 	?>
-	<div itemprop="description">
+	<div class="short_description_wrapper" itemprop="description">
 		<?php echo apply_filters( 'woocommerce_short_description', $product->get_short_description() ) ?>
 	</div>
 	<?php
