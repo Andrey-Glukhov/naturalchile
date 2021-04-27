@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         </div>
     </div>
     <div class="row justify-content-center">
-        <div class="col-12">
+        <div class="col-10">
 
 
             <?php do_action( 'woocommerce_before_checkout_form', $checkout );
@@ -59,7 +59,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
             <?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
 
             <div class="col2-set  row" id="customer_details">
-                <div class="col-md-6 col-sm-12">
+                <div class="col-md-6 col-sm-12 billing_details_wrapper">
                     <?php do_action( 'woocommerce_checkout_billing' ); ?>
                     <div class="col-2">
                         <?php do_action( 'woocommerce_checkout_shipping' ); ?>
@@ -68,7 +68,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
                 <?php //do_action( 'woocommerce_checkout_after_customer_details' ); ?>
 
                 <?php endif; ?>
-                <div class="col-md-6 col-sm-12">
+                <div class="col-md-6 col-sm-12 cart_details_wrapper">
                     <?php do_action( 'woocommerce_checkout_before_order_review_heading' ); ?>
 
                     <h3 id="order_review_heading"><?php esc_html_e( 'Cart details', 'woocommerce' ); ?></h3>
@@ -78,8 +78,10 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
                     <div id="order_review" class="woocommerce-checkout-review-order">
                         <?php do_action( 'woocommerce_checkout_order_review' ); ?>
                     </div>
-                </div>
+					</div>
+					<div class="col-12 cart_details_wrapper">
                 <?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
+				</div>
             </div>
 
         </form>

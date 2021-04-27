@@ -1397,7 +1397,6 @@ ul.row.products.columns-2 {
   flex-wrap: wrap;
 }
 
-
 /* ----------- cart ----------------*/
 
 .woocommerce-info {
@@ -1513,19 +1512,19 @@ ul.row.products.columns-2 {
 }
 
 .woocommerce form h3 {
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    margin-bottom: 50px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  margin-bottom: 50px;
 }
 .woocommerce form .form-row label,
 .woocommerce-page form .form-row label,
-.woocommerce table.shop_table th{
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    font-family: "13552", serif;
-    color: #000;
-    font-weight: normal !important;
-    padding-left: 0;
+.woocommerce table.shop_table th {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-family: "13552", serif;
+  color: #000;
+  font-weight: normal !important;
+  padding-left: 0;
 }
 
 .woocommerce-page form .form-row {
@@ -1779,37 +1778,40 @@ nav.woocommerce-pagination {
 .woocommerce div.product form.cart {
   margin-top: 20px;
 }
-.woocommerce table.shop_table td{
-    color: #000000;
-    font-family: "13552", serif;
-    font-size: 1rem;
+.woocommerce table.shop_table td {
+  color: #000000;
+  font-family: "13552", serif;
+  font-size: 1rem;
 }
-.woocommerce form .form-row.woocommerce-validated .select2-container, .woocommerce form .form-row.woocommerce-validated input.input-text, .woocommerce form .form-row.woocommerce-validated select{
-    border-color: #000 !important;
+.woocommerce form .form-row.woocommerce-validated .select2-container,
+.woocommerce form .form-row.woocommerce-validated input.input-text,
+.woocommerce form .form-row.woocommerce-validated select {
+  border-color: #000 !important;
 }
-.woocommerce table.shop_table tfoot th, 
-.woocommerce table.shop_table tfoot td{
-border-top: none;
-font-weight: normal;
+.woocommerce table.shop_table tfoot th,
+.woocommerce table.shop_table tfoot td {
+  border-top: none;
+  font-weight: normal;
 }
-.woocommerce div.product form.cart .button:hover{
-background-color: #fff;
-color: #000;
+.woocommerce div.product form.cart .button:hover {
+  background-color: #fff;
+  color: #000;
 }
-.woocommerce .woocommerce-cart-form input.input-text.qty.text{
-    border: none;
+.woocommerce .woocommerce-cart-form input.input-text.qty.text {
+  border: none;
 }
-.woocommerce  .woocommerce-form-login-toggle>.woocommerce-info{
-color: #000000;
-font-family: "13552", serif;
-font-size: 1rem;
-text-align: center;
+.woocommerce .woocommerce-form-login-toggle > .woocommerce-info {
+  color: #000000;
+  font-family: "13552", serif;
+  font-size: 1rem;
+  text-align: center;
+  padding: 0;
 }
-.woocommerce  .woocommerce-form-login-toggle>.woocommerce-info>a{
+.woocommerce .woocommerce-form-login-toggle > .woocommerce-info > a {
+  color: #000000;
+  text-decoration: underline;
+}
 
- color: #000000;
-text-decoration: underline;
-    }
 /* ----------- footer ----------------*/
 
 /* ----------- media----------------*/
@@ -1914,6 +1916,29 @@ text-decoration: underline;
   .cart_content_wrapper {
     padding: 0;
   }
+  #customer_details {
+    margin: 0;
+  }
+  .cart_item .product-name .ts-product-image {
+    display: block;
+  }
+  .woocommerce table.shop_table td.product-name {
+    padding-left: 0;
+  }
+  .cart_details_wrapper{
+    margin-top: 60px;
+    padding: 0;
+}
+.billing_details_wrapper{
+    padding: 0; 
+}
+.woocommerce-page form .form-row-first,
+.woocommerce-page form .form-row-last{
+    width: 100%;
+}
+form.checkout.woocommerce-checkout{
+    padding: 0; 
+}
 }
 
 /*sm*/
@@ -2005,6 +2030,18 @@ text-decoration: underline;
   .cart_content_wrapper {
     padding: 0;
   }
+  #customer_details {
+    margin: 0;
+  }
+  .cart_item .product-name .ts-product-image {
+    display: block;
+  }
+  .woocommerce table.shop_table td.product-name {
+    padding-left: 0;
+  }
+  .cart_details_wrapper{
+      margin-top: 60px;
+  }
 }
 
 /*md*/
@@ -2015,6 +2052,12 @@ text-decoration: underline;
   }
   .product_content_wraper {
     padding: 15px;
+  }
+  .cart_item .product-name .ts-product-image {
+    display: block;
+  }
+  .woocommerce table.shop_table td.product-name {
+    padding-left: 0;
   }
 }
 
