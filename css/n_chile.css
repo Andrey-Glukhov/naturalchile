@@ -1529,8 +1529,16 @@ ul.row.products.columns-2 {
 
 .woocommerce-page form .form-row {
   font-family: "13552", serif;
+  flex-direction: column;
 }
-
+.woocommerce form .form-row .select2.select2-container {
+  font-family: "13552", serif;
+  padding: 8px 10px;
+  border: 5px solid #000;
+}
+.woocommerce form .form-row .select2.select2-container .select2-selection.select2-selection--single {
+  border: none;
+}
 .woocommerce form #payment {
   background-color: #fff;
 }
