@@ -1464,10 +1464,16 @@ ul.row.products.columns-2 {
 
 .woocommerce-MyAccount-navigation li {
   list-style: none;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .woocommerce-MyAccount-navigation li a {
   color: #241f20;
+  text-transform: uppercase;
+}
+.woocommerce-MyAccount-navigation li a:hover {
+  text-decoration: none;
 }
 
 .woocommerce-MyAccount-content {
@@ -1823,10 +1829,91 @@ nav.woocommerce-pagination {
   text-decoration: underline;
 }
 .col-icon-wrapper {
-    display: flex;
-    justify-content: flex-end;
-  }
-
+  display: flex;
+  justify-content: flex-end;
+}
+.woocommerce-MyAccount-navigation ul {
+  padding-left: 0;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0mm;
+}
+.woocommerce-MyAccount-navigation-link--dashboard {
+  background-image: url(http://localhost:8888/naturalchile/wordpress/wp-content/uploads/2021/04/home-solid-01.png);
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.woocommerce-MyAccount-navigation-link--orders {
+  background-image: url(http://localhost:8888/naturalchile/wordpress/wp-content/uploads/2021/04/receipt-solid-01.png);
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+.woocommerce-MyAccount-navigation-link--downloads {
+  background-image: url(http://localhost:8888/naturalchile/wordpress/wp-content/uploads/2021/04/download-solid-01.png);
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+.woocommerce-MyAccount-navigation-link--edit-address {
+  background-image: url(http://localhost:8888/naturalchile/wordpress/wp-content/uploads/2021/04/address-book-solid-01.png);
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+.woocommerce-MyAccount-navigation-link--edit-account {
+  background-image: url(http://localhost:8888/naturalchile/wordpress/wp-content/uploads/2021/04/user-solid-01.png);
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+.woocommerce-MyAccount-navigation-link--customer-logout {
+  background-image: url(http://localhost:8888/naturalchile/wordpress/wp-content/uploads/2021/04/sign-out-alt-solid-01.png);
+  width: 35px;
+  height: 35px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+.nav_icons_wrapper {
+  background-color: #241f20;
+  border-top: 5px solid #000;
+  border-bottom: 5px solid #000;
+}
+.woocommerce-account .woocommerce-MyAccount-navigation {
+  width: 100%;
+}
+.woocommerce-account .woocommerce-MyAccount-content {
+  text-align: center;
+  padding: 60px;
+  color: #fff;
+}
+.woocommerce-account .woocommerce-MyAccount-content p a {
+  text-decoration: underline;
+  color: #fff;
+}
+.my_account_content_wrapper {
+  background-color: #00ada0;
+  border-bottom: 5px solid #000;
+  border-right: 5px solid #000;
+  border-left: 5px solid #000;
+}
 /* ----------- footer ----------------*/
 
 /* ----------- media----------------*/
@@ -1955,10 +2042,10 @@ nav.woocommerce-pagination {
   form.checkout.woocommerce-checkout {
     padding: 0;
   }
-  .menu-item a:not(.cart-contents){
+  .menu-item a:not(.cart-contents) {
     line-height: 1.6rem;
-}
-#navbarTogglerDemo03{
+  }
+  #navbarTogglerDemo03 {
     position: absolute;
     width: 100vw;
     top: 90px;
@@ -1968,13 +2055,13 @@ nav.woocommerce-pagination {
     z-index: 100;
     padding: 20px 0px !important;
     border: 5px solid rgb(0, 0, 0);
-}
-.menu-item.menu-item-25 > a,
-.menu-item.menu-item-21 > a,
-.menu-item.menu-item-27 > a,
-.menu-item.menu-item-24 > a{
+  }
+  .menu-item.menu-item-25 > a,
+  .menu-item.menu-item-21 > a,
+  .menu-item.menu-item-27 > a,
+  .menu-item.menu-item-24 > a {
     color: #fff;
-}
+  }
 }
 
 /*sm*/
@@ -2079,7 +2166,7 @@ nav.woocommerce-pagination {
   .cart_details_wrapper {
     margin-top: 60px;
   }
-  #navbarTogglerDemo03{
+  #navbarTogglerDemo03 {
     position: absolute;
     width: 100vw;
     top: 100px;
@@ -2089,13 +2176,13 @@ nav.woocommerce-pagination {
     z-index: 100;
     padding: 20px 0px !important;
     border: 5px solid rgb(0, 0, 0);
-}
-.menu-item.menu-item-25 > a,
-.menu-item.menu-item-21 > a,
-.menu-item.menu-item-27 > a,
-.menu-item.menu-item-24 > a{
+  }
+  .menu-item.menu-item-25 > a,
+  .menu-item.menu-item-21 > a,
+  .menu-item.menu-item-27 > a,
+  .menu-item.menu-item-24 > a {
     color: #fff;
-}
+  }
 }
 
 /*md*/
@@ -2104,8 +2191,8 @@ nav.woocommerce-pagination {
   .menu-item {
     font-size: 0.75rem;
   }
-  .menu-item a:not(.cart-contents){
-      line-height: 1.7rem;
+  .menu-item a:not(.cart-contents) {
+    line-height: 1.7rem;
   }
   .product_content_wraper {
     padding: 15px;

@@ -5,7 +5,10 @@
 get_header(); ?>
 
 <div class="home-container">
-    <div class="home-grid-wraper">
+    <video autoplay muted loop id="myVideo">
+        <source src="http://localhost:8888/naturalchile/wordpress/wp-content/uploads/2021/04/Naturalchile_ladningpage_animation.mp4" type="video/mp4">
+    </video>
+    <!-- <div class="home-grid-wraper">
         <div class="home-cell-1 bg_color_rose"></div>
         <div class="home-cell-2 bg_color_white"></div>
         <div class="home-cell-3 bg_color_blue"></div>
@@ -61,7 +64,7 @@ get_header(); ?>
         <div class="home-cell-53 bg_color_blue"></div>
         <div class="home-cell-54 bg_color_green"></div>
         <div class="home-cell-55 bg_color_black"></div>
-    </div>
+    </div> -->
 </div>
 
 
