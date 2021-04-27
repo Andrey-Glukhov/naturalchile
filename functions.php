@@ -235,4 +235,5 @@ function woocommerce_after_shop_loop_item_title_full_description() {
 }
 add_action('woocommerce_after_shop_loop_item_full_description', 'woocommerce_after_shop_loop_item_title_full_description', 5);
 
+
 ?>

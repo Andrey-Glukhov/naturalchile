@@ -24,30 +24,29 @@ defined( 'ABSPATH' ) || exit;
  */
 ?>
 <div class="container-fluid home-container">
-	<div class="row">
-			<div class="col-12 page_title">
-				<h1><?php the_title(); ?></h1>
-			</div>
-	</div>
-	<div class="row container-row">
-		<div class="side-column-left col-md-1 col-sm-2 col-2" >
-			<div class="grid-cell-left-1 bg_color_red" ></div>
-			<div class="grid-cell-left-2 bg_color_white" ></div>
-			<div class="grid-cell-left-3 bg_color_black"></div>
-			<div class="grid-cell-left-4 bg_color_rose"></div>
-			<div class="grid-cell-left-5 bg_color_white"></div>
-			<div class="grid-cell-left-6 bg_color_green"></div>
-			<div class="grid-cell-left-7 bg_color_rose"></div>
-			<div class="grid-cell-left-8 bg_color_red"></div>
-			<div class="grid-cell-left-9 bg_color_white"></div>
-			<div class="grid-cell-left-10 bg_color_rose last"></div>        
-		</div>
-		<div class="content-column col-md-10 col-sm-8 col-8">
-			<div class="row">
-			<?php 
+    <div class="row">
+        <div class="col-12 page_title">
+            <h1><?php the_title(); ?></h1>
+        </div>
+    </div>
+    <div class="row container-row">
+        <div class="col-md-2 col-sm-1 col-1 contact-grid-left">
+            <div class="contact-cell-left-1 bg_color_black"></div>
+            <div class="contact-cell-left-2 bg_color_red"></div>
+            <div class="contact-cell-left-3 bg_color_white"></div>
+            <div class="contact-cell-left-4 bg_color_rose"></div>
+            <div class="contact-cell-left-5 bg_color_green"></div>
+            <div class="contact-cell-left-6 bg_color_blue"></div>
+            <div class="contact-cell-left-7 bg_color_black"></div>
+        </div>
+        <div class="col-md-8 col-sm-10 col-10 my_account_content_wrapper">
+            <div class="row">
+                <div class="col-12 nav_icons_wrapper">
+                    <?php 
 			do_action( 'woocommerce_account_navigation' ); ?>
-			<div class="woocommerce-MyAccount-content col-md-9">
-				<?php
+                </div>
+                <div class="woocommerce-MyAccount-content col-12">
+                    <?php
 					/**
 					 * My Account content.
 					 *
@@ -55,22 +54,18 @@ defined( 'ABSPATH' ) || exit;
 					 */
 					do_action( 'woocommerce_account_content' );
 				?>
-			</div>
-			</div>
-		</div>
-		<div class="side-column-right col-md-1 col-sm-2 col-2">
-			<div class="grid-cell-right-1 bg_color_rose"></div>
-			<div class="grid-cell-right-2 bg_color_blue"></div>
-			<div class="grid-cell-right-3 bg_color_rose"></div>
-			<div class="grid-cell-right-4 bg_color_green"></div>
-			<div class="grid-cell-right-5 bg_color_red"></div>
-			<div class="grid-cell-right-6 bg_color_rose"></div>
-			<div class="grid-cell-right-7 bg_color_white"></div>
-			<div class="grid-cell-right-8 bg_color_blue last"></div>
-		</div>
-	</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-1 col-1 contact-grid-right">
+            <div class="contact-cell-right-1 bg_color_white"></div>
+            <div class="contact-cell-right-2 bg_color_blue"></div>
+            <div class="contact-cell-right-3 g_color_green"></div>
+            <div class="contact-cell-right-4 g_color_green"></div>
+            <div class="contact-cell-right-5 bg_color_rose"></div>
+            <div class="contact-cell-right-6 bg_color_red"></div>
+            <div class="contact-cell-right-7 bg_color_black"></div>
+        </div>
+    </div>
 
 </div>
-
-
-
