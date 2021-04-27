@@ -1098,7 +1098,7 @@ a.woocommerce-LoopProduct-link.woocommerce-loop-product__link > img {
 }
 
 input.input-text.qty.text {
-  border: none !important;
+  border: 5px solid #000;
   height: 100%;
   padding: 10px 0;
   color: #000;
@@ -1197,6 +1197,7 @@ p.woocommerce-form-row.woocommerce-form-row--wide.form-row.form-row-wide
 }
 
 .woocommerce form .form-row input.input-text {
+  font-family: "13552", serif;
   padding: 8px 10px;
   border: 5px solid #000;
 }
@@ -1513,6 +1514,7 @@ ul.row.products.columns-2 {
 .woocommerce form h3 {
     font-size: 1.1rem;
     text-transform: uppercase;
+    margin-bottom: 50px;
 }
 .woocommerce form .form-row label,
 .woocommerce-page form .form-row label,
@@ -1521,6 +1523,9 @@ ul.row.products.columns-2 {
     text-transform: uppercase;
     font-family: "13552", serif;
     color: #000;
+    font-weight: normal !important;
+    padding-left: 0;
+}
 }
 
 .woocommerce-page form .form-row {
@@ -1746,6 +1751,7 @@ nav.woocommerce-pagination {
 #billing_phone,
 #billing_email,
 #billing_state {
+  font-family: "13552", serif;
   border-radius: 0;
   border: 5px solid #000;
 }
@@ -1773,7 +1779,37 @@ nav.woocommerce-pagination {
 .woocommerce div.product form.cart {
   margin-top: 20px;
 }
+.woocommerce table.shop_table td{
+    color: #000000;
+    font-family: "13552", serif;
+    font-size: 1rem;
+}
+.woocommerce form .form-row.woocommerce-validated .select2-container, .woocommerce form .form-row.woocommerce-validated input.input-text, .woocommerce form .form-row.woocommerce-validated select{
+    border-color: #000 !important;
+}
+.woocommerce table.shop_table tfoot th, 
+.woocommerce table.shop_table tfoot td{
+border-top: none;
+font-weight: normal;
+}
+.woocommerce div.product form.cart .button:hover{
+background-color: #fff;
+color: #000;
+}
+.woocommerce .woocommerce-cart-form input.input-text.qty.text{
+    border: none;
+}
+.woocommerce  .woocommerce-form-login-toggle>.woocommerce-info{
+color: #000000;
+font-family: "13552", serif;
+font-size: 1rem;
+text-align: center;
+}
+.woocommerce  .woocommerce-form-login-toggle>.woocommerce-info>a{
 
+ color: #000000;
+text-decoration: underline;
+    }
 /* ----------- footer ----------------*/
 
 /* ----------- media----------------*/

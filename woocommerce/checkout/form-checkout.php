@@ -24,14 +24,19 @@ if ( ! defined( 'ABSPATH' ) ) {
             <h1>checkout</h1>
         </div>
     </div>
+    <div class="row justify-content-center">
+        <div class="col-12">
 
-    <?php do_action( 'woocommerce_before_checkout_form', $checkout );
+
+            <?php do_action( 'woocommerce_before_checkout_form', $checkout );
 
 // If checkout registration is disabled and not logged in, the user cannot checkout.
 if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_required() && ! is_user_logged_in() ) {
 	echo esc_html( apply_filters( 'woocommerce_checkout_must_be_logged_in_message', __( 'You must be logged in to checkout.', 'woocommerce' ) ) );
 	return;
 }?>
+        </div>
+    </div>
     <div class="row container-row">
         <div class="side-column-left col-md-1 col-sm-2 col-2">
             <div class="grid-cell-left-1 bg_color_green"></div>
@@ -46,8 +51,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
             <div class="grid-cell-left-10 bg_color_rose last"></div>
         </div>
 
-        <form name="checkout" method="post"
-            class="checkout woocommerce-checkout col-md-10 col-sm-8 col-8"
+        <form name="checkout" method="post" class="checkout woocommerce-checkout col-md-10 col-sm-8 col-8"
             action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
 
             <?php if ( $checkout->get_checkout_fields() ) : ?>
