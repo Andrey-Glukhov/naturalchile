@@ -93,12 +93,11 @@ nav.navbar {
   display: none;
   list-style: none;
   position: absolute;
-  top: 50%;
-  right: 40px;
+  top: 48%;
 }
 
 .col-icon-wrapper ul li {
-  margin: 0 10px;
+  margin: 0 3px;
 }
 
 .navbar-toggler:focus,
@@ -106,7 +105,7 @@ nav.navbar {
   outline: none;
 }
 
-animated-icon1 {
+.animated-icon1 {
   width: 27px;
   height: 27px;
   margin: 0px;
@@ -127,7 +126,7 @@ animated-icon1 {
   left: 0;
   transform: rotate(0deg);
   transition: all 0.25s ease-in-out;
-  background-color: #ec4c2e;
+  background-color: #b62126;
 }
 
 .animated-icon1 span:nth-child(1) {
@@ -135,11 +134,11 @@ animated-icon1 {
 }
 
 .animated-icon1 span:nth-child(2) {
-  top: 12px;
+  top: 9px;
 }
 
 .animated-icon1 span:nth-child(3) {
-  top: 21px;
+  top: 15px;
 }
 
 .animated-icon1.open span:nth-child(1) {
@@ -1536,7 +1535,11 @@ ul.row.products.columns-2 {
   padding: 8px 10px;
   border: 5px solid #000;
 }
-.woocommerce form .form-row .select2.select2-container .select2-selection.select2-selection--single {
+.woocommerce
+  form
+  .form-row
+  .select2.select2-container
+  .select2-selection.select2-selection--single {
   border: none;
 }
 .woocommerce form #payment {
@@ -1562,7 +1565,7 @@ ul.row.products.columns-2 {
   > label
   > span.woocommerce-terms-and-conditions-checkbox-text
   > a {
-  color: #ec4c2e;
+  color: #b62126;
 }
 
 nav.woocommerce-pagination {
@@ -1819,6 +1822,10 @@ nav.woocommerce-pagination {
   color: #000000;
   text-decoration: underline;
 }
+.col-icon-wrapper {
+    display: flex;
+    justify-content: flex-end;
+  }
 
 /* ----------- footer ----------------*/
 
@@ -1843,7 +1850,8 @@ nav.woocommerce-pagination {
   }
   .col-menu-wrapper > nav.navbar {
     position: absolute;
-    top: -55px;
+    top: -37px;
+    left: 0;
   }
   .col-icon-wrapper ul {
     display: inline-flex;
@@ -1933,19 +1941,39 @@ nav.woocommerce-pagination {
   .woocommerce table.shop_table td.product-name {
     padding-left: 0;
   }
-  .cart_details_wrapper{
+  .cart_details_wrapper {
     margin-top: 60px;
     padding: 0;
-}
-.billing_details_wrapper{
-    padding: 0; 
-}
-.woocommerce-page form .form-row-first,
-.woocommerce-page form .form-row-last{
+  }
+  .billing_details_wrapper {
+    padding: 0;
+  }
+  .woocommerce-page form .form-row-first,
+  .woocommerce-page form .form-row-last {
     width: 100%;
+  }
+  form.checkout.woocommerce-checkout {
+    padding: 0;
+  }
+  .menu-item a:not(.cart-contents){
+    line-height: 1.6rem;
 }
-form.checkout.woocommerce-checkout{
-    padding: 0; 
+#navbarTogglerDemo03{
+    position: absolute;
+    width: 100vw;
+    top: 90px;
+    left: 0px;
+    text-align: center;
+    background-color: #00ada0;
+    z-index: 100;
+    padding: 20px 0px !important;
+    border: 5px solid rgb(0, 0, 0);
+}
+.menu-item.menu-item-25 > a,
+.menu-item.menu-item-21 > a,
+.menu-item.menu-item-27 > a,
+.menu-item.menu-item-24 > a{
+    color: #fff;
 }
 }
 
@@ -1968,7 +1996,8 @@ form.checkout.woocommerce-checkout{
   }
   .col-menu-wrapper > nav.navbar {
     position: absolute;
-    top: -55px;
+    top: -38px;
+    left: 0;
   }
   .col-icon-wrapper ul {
     display: inline-flex;
@@ -2047,9 +2076,26 @@ form.checkout.woocommerce-checkout{
   .woocommerce table.shop_table td.product-name {
     padding-left: 0;
   }
-  .cart_details_wrapper{
-      margin-top: 60px;
+  .cart_details_wrapper {
+    margin-top: 60px;
   }
+  #navbarTogglerDemo03{
+    position: absolute;
+    width: 100vw;
+    top: 100px;
+    left: 0px;
+    text-align: center;
+    background-color: #00ada0;
+    z-index: 100;
+    padding: 20px 0px !important;
+    border: 5px solid rgb(0, 0, 0);
+}
+.menu-item.menu-item-25 > a,
+.menu-item.menu-item-21 > a,
+.menu-item.menu-item-27 > a,
+.menu-item.menu-item-24 > a{
+    color: #fff;
+}
 }
 
 /*md*/
@@ -2057,6 +2103,9 @@ form.checkout.woocommerce-checkout{
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .menu-item {
     font-size: 0.75rem;
+  }
+  .menu-item a:not(.cart-contents){
+      line-height: 1.7rem;
   }
   .product_content_wraper {
     padding: 15px;
