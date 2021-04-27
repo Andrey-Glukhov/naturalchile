@@ -26,7 +26,7 @@ jQuery(function($) {
       event.preventDefault();
       //event.stopProragation();
     }
-   
+       
 });
 // $(window).on('load', function() {
       //window.load = function() {
@@ -38,9 +38,12 @@ jQuery(function($) {
         var animate2 = ['upper-cell-13'];
         var animate3 = ['upper-cell-4', 'upper-cell-16'];
         var animate4 = ['upper-cell-34'];
-        function setGrid() {     
+        function setGrid() { 
+          if (! $('.home-grid-wraper').length) { 
+            return;
+          }      
           var gridBlock = document.querySelector('.home-grid-wraper');
-          var gridCells = gridBlock.querySelectorAll('.home-grid-wraper>*');
+          var gridCells = document.querySelectorAll('.home-grid-wraper>*');
           if (document.querySelector('.upper_home_grid')) {
             //console.log('++++');
             document.querySelector('.upper_home_grid').remove();
