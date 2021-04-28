@@ -5,9 +5,19 @@
 get_header(); ?>
 
 <div class="home-container">
-    <video autoplay muted loop id="myVideo">
-        <source src="http://localhost:8888/naturalchile/wordpress/wp-content/uploads/2021/04/Naturalchile_ladningpage_animation.mp4" type="video/mp4">
-    </video>
+    <!-- <video autoplay muted loop id="myVideo">
+        <source src="http://localhost:8888/naturalchile/wordpress/wp-content/themes/naturalchile/img/Naturalchile_ladningpage_animation.mp4" type="video/mp4">
+    </video> -->
+    <div id="video-bg">
+  <video autoplay muted loop id="myVideo">
+    <!-- Default video source: -->
+    <source type="video/mp4" src="http://localhost:8888/naturalchile/wordpress/wp-content/themes/naturalchile/img/Naturalchile_ladningpage_animation.mp4"
+            media="(orientation:landscape)">
+     </video>
+  <!--
+    Buttons or metadata go here
+  -->
+</div>
     <!-- <div class="home-grid-wraper">
         <div class="home-cell-1 bg_color_rose"></div>
         <div class="home-cell-2 bg_color_white"></div>
