@@ -1529,6 +1529,9 @@ ul.row.products.columns-2 {
 .woocommerce-MyAccount-navigation li a {
   color: #241f20;
   text-transform: uppercase;
+  display: block;
+    width: 100%;
+    height: 100%;
 }
 .woocommerce-MyAccount-navigation li a:hover {
   text-decoration: none;
@@ -1972,6 +1975,24 @@ nav.woocommerce-pagination {
   border-right: 5px solid #000;
   border-left: 5px solid #000;
 }
+.woocommerce-message.woocommerce-message--info.woocommerce-Message.woocommerce-Message--info.woocommerce-info,
+.woocommerce-Message.woocommerce-Message--info.woocommerce-info p{
+    color: #ffffff;
+    font-family: "13552", serif;
+    font-size: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+.woocommerce-info .button, .woocommerce-message .button.woocommerce-Button,
+.woocommerce-page .woocommerce-info .button.woocommerce-Button{
+float: none;
+border: 5px solid #000;
+border-radius: 0;
+background-color: #fff;
+color: #000;
+text-transform: uppercase;
+}
+
 /* ----------- footer ----------------*/
 
 /* ----------- media----------------*/
