@@ -58,6 +58,10 @@ remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_p
 //Rmove single prodict meta
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
 
+//Rmove single prodict short description
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
+
+
 //Remove shop page ???
 //remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
 // Hide shop page title
